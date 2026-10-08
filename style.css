@@ -1,0 +1,72 @@
+:root {
+  --plum: #5b2a6e;
+  --plum-dark: #3d1a4b;
+  --pink: #e7a6c4;
+  --pink-soft: #fbeef4;
+  --gold: #e8a92a;
+  --cyan: #2ec4d6;
+  --ink: #2a2230;
+  --muted: #6b6172;
+  --bg: #fffafc;
+  --card: #ffffff;
+  --line: #f0dbe6;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f3ecf6;
+    --muted: #c3b6cb;
+    --bg: #1d1422;
+    --card: #2a1e31;
+    --line: #432f4d;
+    --pink-soft: #33223b;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 17px/1.65 "Noto Sans", "Noto Sans Kannada", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+a { color: var(--plum); }
+@media (prefers-color-scheme: dark) { a { color: var(--pink); } }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+header.site {
+  background: linear-gradient(135deg, var(--plum-dark), var(--plum));
+  color: #fff;
+}
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 14px; padding-bottom: 14px; flex-wrap: wrap; }
+header.site a.brand { color: #fff; text-decoration: none; font-weight: 700; font-size: 18px; }
+header.site nav a { color: #fff; opacity: .9; text-decoration: none; margin-left: 16px; font-size: 15px; }
+header.site nav a:first-child { margin-left: 0; }
+header.site nav a:hover { opacity: 1; text-decoration: underline; }
+.hero { text-align: center; padding: 40px 0 8px; }
+.hero img {
+  width: 180px; height: 180px; border-radius: 50%;
+  border: 6px solid var(--pink); background: var(--pink-soft);
+}
+.hero h1 { font-size: 34px; line-height: 1.2; margin: 18px 0 6px; }
+.hero .kn { font-size: 20px; color: var(--plum); margin: 0 0 8px; }
+@media (prefers-color-scheme: dark) { .hero .kn { color: var(--pink); } }
+.hero .tag { color: var(--muted); margin: 0; }
+.pills { margin: 18px 0 0; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.pill { display: inline-block; padding: 6px 16px; border-radius: 999px; font-weight: 700; font-size: 15px; border: 3px solid; }
+.pill.brahma { border-color: var(--gold); background: #fff6e2; color: #6b4a07; }
+.pill.ai { border-color: var(--cyan); background: #e9fbfd; color: #0d5560; }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+  padding: 22px 22px; margin: 24px 0;
+}
+.card h2 { margin-top: 0; font-size: 22px; }
+.links { display: flex; gap: 10px; flex-wrap: wrap; }
+.links a {
+  display: inline-block; padding: 9px 16px; border-radius: 10px;
+  background: var(--pink-soft); border: 1px solid var(--line); text-decoration: none; font-weight: 600;
+}
+main.doc h1 { font-size: 30px; line-height: 1.25; margin: 34px 0 4px; }
+main.doc .updated { color: var(--muted); margin-top: 0; }
+main.doc h2 { font-size: 21px; margin-top: 30px; }
+main.doc li { margin: 4px 0; }
+footer.site { border-top: 1px solid var(--line); margin-top: 40px; padding: 20px 0 36px; color: var(--muted); font-size: 14px; }
+footer.site a { margin-right: 14px; }
