@@ -70,3 +70,9 @@ main.doc h2 { font-size: 21px; margin-top: 30px; }
 main.doc li { margin: 4px 0; }
 footer.site { border-top: 1px solid var(--line); margin-top: 40px; padding: 20px 0 36px; color: var(--muted); font-size: 14px; }
 footer.site a { margin-right: 14px; }
+.cta { margin: 22px 0 0; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.cta a { display: inline-block; padding: 11px 22px; border-radius: 12px; font-weight: 700; text-decoration: none; }
+.cta a.yt { background: #ff0033; color: #fff; }
+.cta a.pp { background: var(--card); border: 2px solid var(--plum); color: var(--plum); }
+@media (prefers-color-scheme: dark) { .cta a.pp { border-color: var(--pink); color: var(--pink); } }
+.api-note { margin: 10px 0 0; }
